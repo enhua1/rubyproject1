@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :articles #new article , post, edit, patch to update, delete show, index
+  resources :articles 
+
+  root 'pages#home'
+
+  get 'pages/home', to: 'pages#home'
+
+  get 'pages/about', to: 'pages#about'
+
+  #new article , post, edit, patch to update, delete show, index
 
   #get path(views) to controller path
   #get 'pages/home', to: 'pages#home'
