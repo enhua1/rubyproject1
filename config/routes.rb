@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   get 'pages/about', to: 'pages#about'
 
+  get 'signup', to: 'users#new'
+
+  resources :users, except: [:new]
+
   #new article , post, edit, patch to update, delete show, index
 
   #get path(views) to controller path
