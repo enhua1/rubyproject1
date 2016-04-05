@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  resources :categories, except: [:destroy]
+
   #new article , post, edit, patch to update, delete show, index
 
   #get path(views) to controller path
