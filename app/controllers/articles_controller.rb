@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def create #create action is an end itself not a template
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = current_user
     # @article.save
     # redirect_to article_path(@article)
 
